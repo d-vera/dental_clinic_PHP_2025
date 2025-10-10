@@ -1,0 +1,141 @@
+═══════════════════════════════════════════════════════════════════
+    GUÍA RÁPIDA DE INSTALACIÓN - SISTEMA DE CLÍNICA MÉDICA
+═══════════════════════════════════════════════════════════════════
+
+📋 REQUISITOS PREVIOS
+─────────────────────
+✓ XAMPP instalado (Apache + MySQL + PHP)
+✓ Navegador web (Chrome, Firefox, Edge, etc.)
+
+🚀 PASOS DE INSTALACIÓN
+─────────────────────
+
+1️⃣ INICIAR XAMPP
+   - Abrir XAMPP Control Panel
+   - Click en "Start" para Apache
+   - Click en "Start" para MySQL
+   - Esperar a que ambos estén en verde
+
+2️⃣ CREAR LA BASE DE DATOS
+   - Abrir navegador
+   - Ir a: http://localhost/phpmyadmin
+   - Click en "Nueva" (o "New")
+   - Nombre de la base de datos: clinica_medica
+   - Cotejamiento: utf8mb4_unicode_ci
+   - Click en "Crear"
+
+3️⃣ IMPORTAR LOS DATOS
+   - Seleccionar la base de datos "clinica_medica"
+   - Click en la pestaña "Importar" (o "Import")
+   - Click en "Seleccionar archivo"
+   - Buscar y seleccionar: database.sql
+   - Click en "Continuar" o "Go"
+   - Esperar mensaje de éxito
+
+4️⃣ ACCEDER AL SISTEMA
+   - Abrir navegador
+   - Ir a: http://localhost/fourthBim/4. final_project/
+   - ¡El sistema está listo!
+
+🔐 USUARIOS DE PRUEBA
+─────────────────────
+
+ADMINISTRADOR:
+  Usuario: admin
+  Contraseña: admin123
+  
+USUARIO REGULAR:
+  Usuario: usuario
+  Contraseña: admin123
+
+📁 ESTRUCTURA DE CARPETAS
+─────────────────────────
+La carpeta debe estar en:
+C:\xampp\htdocs\fourthBim\4. final_project\
+
+Estructura interna:
+├── config/          (Configuración)
+├── includes/        (Header y Footer)
+├── pages/           (Páginas del sistema)
+│   ├── pacientes/   (Módulo de pacientes)
+│   ├── medicos/     (Módulo de médicos)
+│   ├── servicios.php
+│   └── contacto.php
+├── assets/          (CSS y JavaScript)
+├── uploads/         (Fotos - se crea automáticamente)
+├── database.sql     (Script de base de datos)
+├── index.php        (Página principal)
+└── login.php        (Inicio de sesión)
+
+✅ VERIFICAR INSTALACIÓN
+─────────────────────────
+1. Página principal carga correctamente
+2. Puedes hacer login con admin/admin123
+3. Ves el dashboard con estadísticas
+4. Puedes acceder a Pacientes y Médicos
+5. Puedes crear, editar y ver registros
+
+🐛 SOLUCIÓN DE PROBLEMAS
+─────────────────────────
+
+❌ Error: "No se puede conectar a la base de datos"
+   ✓ Verificar que MySQL esté corriendo en XAMPP
+   ✓ Verificar que la base de datos "clinica_medica" existe
+   ✓ Revisar config/database.php
+
+❌ Error: "Página no encontrada" o 404
+   ✓ Verificar la ruta: debe ser fourthBim/4. final_project/
+   ✓ Verificar que Apache esté corriendo
+   ✓ Revisar que la carpeta esté en htdocs
+
+❌ Las imágenes no se guardan
+   ✓ Crear manualmente las carpetas:
+      - uploads/pacientes/
+      - uploads/medicos/
+   ✓ Dar permisos de escritura si es necesario
+
+❌ No puedo iniciar sesión
+   ✓ Verificar que importaste database.sql
+   ✓ Usar exactamente: admin / admin123
+   ✓ Verificar que las cookies estén habilitadas
+
+📞 FUNCIONALIDADES PRINCIPALES
+─────────────────────────────
+✓ Gestión completa de Pacientes (CRUD)
+✓ Gestión completa de Médicos (CRUD)
+✓ Sistema de login con roles
+✓ Búsqueda y filtrado de datos
+✓ Reportes en PDF
+✓ Carga de fotos de perfil
+✓ Diseño responsivo (móvil, tablet, PC)
+✓ Validaciones frontend y backend
+✓ Página de servicios médicos
+✓ Página de contacto
+
+🎯 PRIMEROS PASOS
+─────────────────
+1. Iniciar sesión como administrador
+2. Ir a "Pacientes" → "Nuevo Paciente"
+3. Llenar el formulario y guardar
+4. Ver el paciente creado en la lista
+5. Probar editar, ver detalles y eliminar
+6. Repetir con "Médicos"
+7. Generar reportes PDF
+8. Explorar Servicios y Contacto
+
+📚 DOCUMENTACIÓN COMPLETA
+─────────────────────────
+Ver archivo: README.md
+Contiene información detallada sobre:
+- Arquitectura del sistema
+- Estructura de base de datos
+- Funcionalidades avanzadas
+- Personalización
+- Mantenimiento
+
+═══════════════════════════════════════════════════════════════════
+    ¡INSTALACIÓN COMPLETADA! El sistema está listo para usar
+═══════════════════════════════════════════════════════════════════
+
+Desarrollado para el curso de Programación Web
+Octubre 2025 - Versión 1.0.0
