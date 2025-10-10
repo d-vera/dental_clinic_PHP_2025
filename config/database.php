@@ -4,6 +4,7 @@
  */
 
 define('DB_HOST', 'localhost');
+define('DB_PORT', 3306);
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'clinica_medica');
@@ -11,7 +12,14 @@ define('DB_NAME', 'clinica_medica');
 // Crear conexión
 function getConnection() {
     try {
-        $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        // Usar variables locales para asegurar que los valores se pasen correctamente
+        $host = DB_HOST;
+        $user = DB_USER;
+        $pass = DB_PASS;
+        $dbname = DB_NAME;
+        $port = DB_PORT;
+        
+        $conn = new mysqli($host, $user, $pass, $dbname, $port);
         
         if ($conn->connect_error) {
             throw new Exception("Error de conexión: " . $conn->connect_error);

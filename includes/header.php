@@ -17,13 +17,13 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/fourthBim/4. final_project/assets/css/style.css">
+    <link rel="stylesheet" href="/clinic/assets/css/style.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/fourthBim/4. final_project/index.php">
+            <a class="navbar-brand" href="/clinic/index.php">
                 <i class="bi bi-hospital"></i> Clínica Médica
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,29 +32,29 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'index' ? 'active' : ''; ?>" href="/fourthBim/4. final_project/index.php">
+                        <a class="nav-link <?php echo $currentPage === 'index' ? 'active' : ''; ?>" href="/clinic/index.php">
                             <i class="bi bi-house"></i> Inicio
                         </a>
                     </li>
                     <?php if (isLoggedIn()): ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'pacientes' ? 'active' : ''; ?>" href="/fourthBim/4. final_project/pages/pacientes/index.php">
+                        <a class="nav-link <?php echo $currentPage === 'pacientes' ? 'active' : ''; ?>" href="/clinic/pages/pacientes/index.php">
                             <i class="bi bi-people"></i> Pacientes
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'medicos' ? 'active' : ''; ?>" href="/fourthBim/4. final_project/pages/medicos/index.php">
+                        <a class="nav-link <?php echo $currentPage === 'medicos' ? 'active' : ''; ?>" href="/clinic/pages/medicos/index.php">
                             <i class="bi bi-person-badge"></i> Médicos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'servicios' ? 'active' : ''; ?>" href="/fourthBim/4. final_project/pages/servicios.php">
+                        <a class="nav-link <?php echo $currentPage === 'servicios' ? 'active' : ''; ?>" href="/clinic/pages/servicios.php">
                             <i class="bi bi-heart-pulse"></i> Servicios
                         </a>
                     </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'contacto' ? 'active' : ''; ?>" href="/fourthBim/4. final_project/pages/contacto.php">
+                        <a class="nav-link <?php echo $currentPage === 'contacto' ? 'active' : ''; ?>" href="/clinic/pages/contacto.php">
                             <i class="bi bi-envelope"></i> Contacto
                         </a>
                     </li>
@@ -68,12 +68,12 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><span class="dropdown-item-text"><small>Rol: <?php echo ucfirst($currentUser['rol']); ?></small></span></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/fourthBim/4. final_project/logout.php"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="/clinic/logout.php"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
                         </ul>
                     </li>
                     <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/fourthBim/4. final_project/login.php">
+                        <a class="nav-link" href="/clinic/login.php">
                             <i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión
                         </a>
                     </li>

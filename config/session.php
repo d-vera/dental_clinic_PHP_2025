@@ -21,7 +21,7 @@ function isAdmin() {
 // Requerir login
 function requireLogin() {
     if (!isLoggedIn()) {
-        header("Location: /fourthBim/4. final_project/login.php");
+        header("Location: /clinic/login.php");
         exit();
     }
 }
@@ -30,7 +30,7 @@ function requireLogin() {
 function requireAdmin() {
     requireLogin();
     if (!isAdmin()) {
-        header("Location: /fourthBim/4. final_project/index.php");
+        header("Location: /clinic/index.php");
         exit();
     }
 }
@@ -53,7 +53,7 @@ function getCurrentUser() {
 function logout() {
     session_unset();
     session_destroy();
-    header("Location: /fourthBim/4. final_project/login.php");
+    header("Location: /clinic/login.php");
     exit();
 }
 ?>

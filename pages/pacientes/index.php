@@ -113,7 +113,7 @@ $result = $conn->query($query);
                                 <td><?php echo $row['id']; ?></td>
                                 <td>
                                     <?php if ($row['foto']): ?>
-                                    <img src="/fourthBim/4. final_project/uploads/pacientes/<?php echo htmlspecialchars($row['foto']); ?>" 
+                                    <img src="/clinic/uploads/pacientes/<?php echo htmlspecialchars($row['foto']); ?>" 
                                          class="profile-img-sm me-2" alt="Foto">
                                     <?php endif; ?>
                                     <?php echo htmlspecialchars($row['nombre'] . ' ' . $row['apellido']); ?>

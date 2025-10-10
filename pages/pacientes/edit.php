@@ -257,7 +257,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="foto" class="form-label">Foto del Paciente</label>
                         <?php if ($paciente['foto']): ?>
                         <div class="mb-2">
-                            <img src="/fourthBim/4. final_project/uploads/pacientes/<?php echo htmlspecialchars($paciente['foto']); ?>" 
+                            <img src="/clinic/uploads/pacientes/<?php echo htmlspecialchars($paciente['foto']); ?>" 
                                  class="profile-img-sm" alt="Foto actual">
                             <small class="text-muted ms-2">Foto actual</small>
                         </div>

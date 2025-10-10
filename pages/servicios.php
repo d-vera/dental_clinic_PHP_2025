@@ -156,7 +156,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <li><i class="bi bi-whatsapp"></i> WhatsApp: +1 (809) 555-0100</li>
                     </ul>
                     <?php if (isLoggedIn()): ?>
-                    <a href="/fourthBim/4. final_project/pages/contacto.php" class="btn btn-light">
+                    <a href="/clinic/pages/contacto.php" class="btn btn-light">
                         <i class="bi bi-calendar-plus"></i> Solicitar Cita
                     </a>
                     <?php endif; ?>
@@ -197,7 +197,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <i class="bi bi-envelope"></i> Contáctanos
                     </a>
                     <?php if (!isLoggedIn()): ?>
-                    <a href="/fourthBim/4. final_project/login.php" class="btn btn-success btn-lg">
+                    <a href="/clinic/login.php" class="btn btn-success btn-lg">
                         <i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión
                     </a>
                     <?php endif; ?>

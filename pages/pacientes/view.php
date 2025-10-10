@@ -50,7 +50,7 @@ $paciente = $result->fetch_assoc();
             <div class="card">
                 <div class="card-body text-center">
                     <?php if ($paciente['foto']): ?>
-                    <img src="/fourthBim/4. final_project/uploads/pacientes/<?php echo htmlspecialchars($paciente['foto']); ?>" 
+                    <img src="/clinic/uploads/pacientes/<?php echo htmlspecialchars($paciente['foto']); ?>" 
                          class="profile-img mb-3" alt="Foto del paciente">
                     <?php else: ?>
                     <i class="bi bi-person-circle text-muted" style="font-size: 150px;"></i>
