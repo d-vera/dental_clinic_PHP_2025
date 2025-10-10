@@ -132,6 +132,7 @@ if (isLoggedIn()) {
             </div>
         </div>
         <?php else: ?>
+        <div class="col-lg-2"></div>
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 text-center">
                 <div class="card-body">
@@ -144,9 +145,8 @@ if (isLoggedIn()) {
                 </div>
             </div>
         </div>
-        <?php endif; ?>
 
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 text-center">
                 <div class="card-body">
                     <i class="bi bi-envelope text-info card-icon"></i>
@@ -158,6 +158,8 @@ if (isLoggedIn()) {
                 </div>
             </div>
         </div>
+        <div class="col-lg-2"></div>
+        <?php endif; ?>
     </div>
 
     <!-- Información adicional -->
