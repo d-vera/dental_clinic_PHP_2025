@@ -21,6 +21,24 @@
                     <p class="mb-1"><i class="bi bi-telephone"></i> +1 (809) 555-0100</p>
                     <p class="mb-1"><i class="bi bi-envelope"></i> info@clinicamedica.com</p>
                     <p class="mb-1"><i class="bi bi-geo-alt"></i> Santo Domingo, República Dominicana</p>
+                    <div class="mt-3">
+                        <h6>Síguenos</h6>
+                        <a href="https://facebook.com" target="_blank" class="text-white me-3" title="Facebook">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-white me-3" title="Twitter">
+                            <i class="bi bi-twitter fs-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-white me-3" title="Instagram">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-white me-3" title="LinkedIn">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="text-white" title="YouTube">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <hr class="bg-white">
