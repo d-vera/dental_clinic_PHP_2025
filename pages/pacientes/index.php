@@ -108,9 +108,10 @@ $result = $conn->query($query);
                     </thead>
                     <tbody>
                         <?php if ($result && $result->num_rows > 0): ?>
+                            <?php $counter = 1; ?>
                             <?php while ($row = $result->fetch_assoc()): ?>
                             <tr>
-                                <td><?php echo $row['id']; ?></td>
+                                <td><?php echo $counter++; ?></td>
                                 <td>
                                     <?php if ($row['foto']): ?>
                                     <img src="/clinic/uploads/pacientes/<?php echo htmlspecialchars($row['foto']); ?>" 

@@ -26,7 +26,7 @@ if (!empty($search)) {
     $searchQuery = " WHERE nombre LIKE '%$search%' OR apellido LIKE '%$search%' OR especialidad LIKE '%$search%' OR email LIKE '%$search%'";
 }
 
-$query = "SELECT * FROM medicos $searchQuery ORDER BY fecha_registro DESC";
+$query = "SELECT * FROM medicos $searchQuery ORDER BY id ASC";
 $result = $conn->query($query);
 ?>
 
