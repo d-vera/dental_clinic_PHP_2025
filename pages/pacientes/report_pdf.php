@@ -2,7 +2,8 @@
 require_once __DIR__ . '/../../config/session.php';
 require_once __DIR__ . '/../../config/database.php';
 
-requireLogin();
+// Solo administradores pueden generar reportes de pacientes
+requireAdmin();
 
 // Configuración para PDF
 header('Content-Type: text/html; charset=utf-8');

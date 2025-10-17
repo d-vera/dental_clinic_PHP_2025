@@ -3,7 +3,8 @@ $pageTitle = 'Ver Paciente';
 require_once __DIR__ . '/../../includes/header.php';
 require_once __DIR__ . '/../../config/database.php';
 
-requireLogin();
+// Solo administradores pueden ver detalles de pacientes
+requireAdmin();
 
 $conn = getConnection();
 $id = (int)($_GET['id'] ?? 0);

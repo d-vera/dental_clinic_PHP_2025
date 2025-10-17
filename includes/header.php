@@ -37,21 +37,23 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
                         </a>
                     </li>
                     <?php if (isLoggedIn()): ?>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'pacientes' ? 'active' : ''; ?>" href="/clinic/pages/pacientes/index.php">
-                            <i class="bi bi-people"></i> Pacientes
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'medicos' ? 'active' : ''; ?>" href="/clinic/pages/medicos/index.php">
-                            <i class="bi bi-person-badge"></i> Médicos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'servicios' ? 'active' : ''; ?>" href="/clinic/pages/servicios.php">
-                            <i class="bi bi-heart-pulse"></i> Servicios
-                        </a>
-                    </li>
+                        <?php if (isAdmin()): ?>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo $currentPage === 'pacientes' ? 'active' : ''; ?>" href="/clinic/pages/pacientes/index.php">
+                                <i class="bi bi-people"></i> Pacientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo $currentPage === 'medicos' ? 'active' : ''; ?>" href="/clinic/pages/medicos/index.php">
+                                <i class="bi bi-person-badge"></i> Médicos
+                            </a>
+                        </li>
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo $currentPage === 'servicios' ? 'active' : ''; ?>" href="/clinic/pages/servicios.php">
+                                <i class="bi bi-heart-pulse"></i> Servicios
+                            </a>
+                        </li>
                     <?php endif; ?>
                     <li class="nav-item">
                         <a class="nav-link <?php echo $currentPage === 'contacto' ? 'active' : ''; ?>" href="/clinic/pages/contacto.php">

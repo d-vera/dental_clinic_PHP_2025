@@ -3,7 +3,8 @@ $pageTitle = 'Nuevo Médico';
 require_once __DIR__ . '/../../includes/header.php';
 require_once __DIR__ . '/../../config/database.php';
 
-requireLogin();
+// Solo administradores pueden crear médicos
+requireAdmin();
 
 $errors = [];
 
@@ -178,9 +179,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="col-md-6 mb-3">
                         <label for="telefono" class="form-label">Teléfono <span class="text-danger">*</span></label>
                         <input type="tel" class="form-control" id="telefono" name="telefono" 
-                               required placeholder="809-555-0100"
+                               required placeholder="7XXXXXXX" pattern="[0-9]{8}" maxlength="8"
                                value="<?php echo htmlspecialchars($_POST['telefono'] ?? ''); ?>">
-                        <div class="invalid-feedback">Por favor, ingrese el teléfono</div>
+                        <div class="invalid-feedback">Por favor, ingrese un teléfono válido (8 dígitos)</div>
+                        <small class="text-muted">Formato: 8 dígitos (ej: 71234567)</small>
                     </div>
 
                     <div class="col-md-6 mb-3">

@@ -3,11 +3,13 @@ $pageTitle = 'Gestión de Médicos';
 require_once __DIR__ . '/../../includes/header.php';
 require_once __DIR__ . '/../../config/database.php';
 
-requireLogin();
+// Solo administradores pueden gestionar médicos
+requireAdmin();
 
 $conn = getConnection();
 
-if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
+// Manejar eliminación (solo admin)
+if (isset($_GET['delete']) && is_numeric($_GET['delete']) && isAdmin()) {
     $id = (int)$_GET['delete'];
     $query = "DELETE FROM medicos WHERE id = $id";
     if ($conn->query($query)) {

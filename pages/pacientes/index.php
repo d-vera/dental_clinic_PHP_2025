@@ -3,13 +3,13 @@ $pageTitle = 'Gestión de Pacientes';
 require_once __DIR__ . '/../../includes/header.php';
 require_once __DIR__ . '/../../config/database.php';
 
-// Requerir login
-requireLogin();
+// Solo administradores pueden gestionar pacientes
+requireAdmin();
 
 $conn = getConnection();
 
-// Manejar eliminación
-if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
+// Manejar eliminación (solo admin)
+if (isset($_GET['delete']) && is_numeric($_GET['delete']) && isAdmin()) {
     $id = (int)$_GET['delete'];
     $query = "DELETE FROM pacientes WHERE id = $id";
     if ($conn->query($query)) {
